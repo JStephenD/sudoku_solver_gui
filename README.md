@@ -9,9 +9,7 @@
 > ### Steps
 1. do &nbsp;&nbsp; **`pip install pipenv`**
 2. **Download** or **Clone** repo
-3. **cd** into downloaded/cloned folder
-
-_once in directory_
+3. **cd** into downloaded/cloned folder \ _once in directory_ \
 4. do &nbsp;&nbsp; **`pipenv install`** &nbsp; to install required packages (in a virtual environment) `*1`
 5. do &nbsp;&nbsp; **`pipenv shell`** &nbsp; to activate the virtual environment `*1`
 6. do &nbsp;&nbsp; **`python sudoku.py`** &nbsp; to run the program `*2`
