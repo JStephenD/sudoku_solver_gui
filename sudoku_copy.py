@@ -13,7 +13,7 @@ H = 407 # added 2 pixels for 3x3 subgrid emphasis with double lines
 win = pygame.display.set_mode((W, H))
 cellw = W // 9
 cellh = H // 9
-TICK_SPEED = 100 # lower = slower
+TICK_SPEED = 1000 # lower = slower
 
 # COLORS
 WHITE = (255,255,255)
@@ -160,6 +160,7 @@ def main():
     while run:
         for event in pygame.event.get():
             if event.type == pygame.QUIT: 
+                print(seen)
                 run = False
 
         draw_bg()
@@ -180,6 +181,9 @@ def main():
             ls = seen[(x, y)]
             start = ls[-1] if len(ls) else 1
             for i in range(start, 10):
+                if (x, y) == (0, 4):
+                    print(i, is_valid(x, y, i, True))
+
                 clear_num(x, y)
                 draw_num(i, x, y, col=BLUE, win=solution_surface)
                 refresh()
@@ -200,6 +204,7 @@ def main():
                     continue
                 x, y = res
                 solution[x][y] = 0
+                print((x, y))
                 continue
             else:
                 seen[(x, y)].append(i)
