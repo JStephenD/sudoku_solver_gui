@@ -20,6 +20,7 @@ WHITE = (255,255,255)
 BLACK = (0,0,0)
 GREEN = (100,190,100)
 BLUE = (100,100,190)
+#as d
 
 # WHITE BACKGROUND GLOBAL
 background = pygame.Surface(win.get_size()).convert()
