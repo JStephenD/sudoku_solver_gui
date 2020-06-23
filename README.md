@@ -2,6 +2,8 @@
 
 ## How to Run:
 
+[![Run on Repl.it](https://repl.it/badge/github/JStephenD/sudoku_solver_gui)](https://repl.it/github/JStephenD/sudoku_solver_gui)
+
 > ### Environment
 > * Programming Language: Python
 > * Python Version (of my python): 3.8.2
