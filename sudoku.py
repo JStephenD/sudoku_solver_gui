@@ -8,12 +8,12 @@ font = pygame.font.SysFont('Anonymous Pro for Powerline', 50) # or None if you d
 pygame.display.set_caption('Sudoku Solver')
 
 # GLOBAL VARIABLES
-W = 407 # refer to test.py to get dimensions
-H = 407 # added 2 pixels for 3x3 subgrid emphasis with double lines
+W = 693 # refer to test.py to get dimensions
+H = 693 # added 2 pixels for 3x3 subgrid emphasis with double lines
 win = pygame.display.set_mode((W, H))   
 cellw = W // 9
 cellh = H // 9
-TICK_SPEED = 100 # lower = slower
+TICK_SPEED = 30 # lower = slower
 
 # COLORS
 WHITE = (255,255,255)
@@ -52,13 +52,11 @@ def draw_grids():
         shows emphasis on the subgrids by doubling the line
     ''' 
     for x in range(0, 10):
-        if x % 3 == 0:
-            pygame.draw.line(win, GREEN, (0, x*cellh+1), (W, x*cellh+1))
         pygame.draw.line(win, GREEN, (0, x*cellh), (W, x*cellh))
+        pygame.draw.line(win, GREEN, (0, x*cellh+1), (W, x*cellh+1))
     for y in range(0, 10):
-        if y % 3 == 0:
-            pygame.draw.line(win, GREEN, (y*cellw+1, 0), (y*cellw+1, H))    
         pygame.draw.line(win, GREEN, (y*cellw, 0), (y*cellw, H))
+        pygame.draw.line(win, GREEN, (y*cellw+1, 0), (y*cellw+1, H))
 
 def clear_num(x, y, col=WHITE):
     ''' paints a white box to clear the painted number
