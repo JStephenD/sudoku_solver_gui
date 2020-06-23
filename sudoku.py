@@ -8,8 +8,8 @@ font = pygame.font.SysFont('Anonymous Pro for Powerline', 50) # or None if you d
 pygame.display.set_caption('Sudoku Solver')
 
 # GLOBAL VARIABLES
-W = 693 # refer to test.py to get dimensions
-H = 693 # added 2 pixels for 3x3 subgrid emphasis with double lines
+W = 612 # refer to test.py to get dimensions
+H = 612 # added 2 pixels for 3x3 subgrid emphasis with double lines
 win = pygame.display.set_mode((W, H))   
 cellw = W // 9
 cellh = H // 9
